@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.view.isVisible
+import androidx.fragment.app.Fragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var clickButton: Button

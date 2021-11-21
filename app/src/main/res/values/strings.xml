@@ -3,4 +3,6 @@
     <string name="nombre_1">Nombre 1</string>
     <string name="nombre_2">Nombre 2</string>
     <string name="calculer">Calculer</string>
+    <string name="cliquez_moi">Cliquez moi</string>
+    <string name="textview">TextView</string>
 </resources>
