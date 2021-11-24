@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">neighbors</string>
+    <string name="hint_address">Address</string>
+    <string name="error_message_for_required_field">Required field</string>
+    <string name="error_message_for_invalid_URI">Invalid URI</string>
+    <string name="error_message_for_invalid_name">Invalid name: 3 characters min et 30 characters max</string>
+    <string name="error_message_for_invalid_phone">Invalid phone number: format 06 XX XX XX XX or 07 XX XX XX XX</string>
+    <string name="error_message_for_invalid_website">Invalid website</string>
+    <string name="error_message_for_invalid_address">Invalid address: 3 characters min and 30 characters max</string>
+    <string name="error_message_for_invalid_about">Invalid about: 3 characters min and 30 characters max</string>
+    <string name="list_neighbors_title">Neghbors list</string>
+    <string name="add_neighbors_title">New neighbor</string>
+</resources>

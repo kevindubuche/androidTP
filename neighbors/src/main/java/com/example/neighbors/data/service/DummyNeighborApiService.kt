@@ -4,24 +4,25 @@ import com.example.neighbors.models.Neighbor
 
 class DummyNeighborApiService : NeighborApiService {
 
-//    override var neighbours: List<Neighbor>
-//        get() = DUMMY_NeighborS
+    override val neighbours: List<Neighbor>
+        get() = DUMMY_NeighborS
 
 
-    override fun getNeighbour(): List<Neighbor> {
-        return DUMMY_NeighborS
-    }
+//    override fun getNeighbour(): MutableList<Neighbor> {
+//        return DUMMY_NeighborS
+//    }
 
     override fun deleteNeighbour(neighbor: Neighbor) {
 //        DUMMY_NeighborS = DUMMY_NeighborS.drop(DUMMY_NeighborS.indexOf(neighbor))
-        DUMMY_NeighborS = DUMMY_NeighborS.toMutableList().apply {
-            removeAt(DUMMY_NeighborS.indexOf(neighbor))
-        }
+//         DUMMY_NeighborS.toMutableList().apply {
+//            removeAt(DUMMY_NeighborS.indexOf(neighbor))
+//        }
+        DUMMY_NeighborS.remove(neighbor)
         println(DUMMY_NeighborS)
     }
 
     override fun createNeighbour(neighbor: Neighbor) {
-        TODO("Not yet implemented")
+        DUMMY_NeighborS.add(neighbor)
     }
 
     override fun updateFavoriteStatus(neighbor: Neighbor) {
@@ -32,8 +33,8 @@ class DummyNeighborApiService : NeighborApiService {
         TODO("Not yet implemented")
     }
 
-
-    private var DUMMY_NeighborS: List<Neighbor> = listOf(
+   private val DUMMY_NeighborS: MutableList<Neighbor> = mutableListOf(
+ //   private var DUMMY_NeighborS: List<Neighbor> = listOf(
         Neighbor(
             1, "Caroline",
             "https://i.picsum.photos/id/1011/5472/3648.jpg?hmac=Koo9845x2akkVzVFX3xxAc9BCkeGYA9VRVfLE4f0Zzk",

@@ -7,8 +7,8 @@ interface NeighborApiService {
      * Get all my Neighbors
      * @return [List]
      */
-//    var neighbours: List<Neighbor>
-    fun getNeighbour(): List<Neighbor>
+    val neighbours: List<Neighbor>
+//    fun getNeighbour(): List<Neighbor>
 
     /**
      * Deletes a neighbor

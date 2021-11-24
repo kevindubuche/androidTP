@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">neighbors</string>
+    <string name="hint_address">Adresse</string>
+    <string name="error_message_for_required_field">Ce champs est obligatoire</string>
+    <string name="error_message_for_invalid_URI">URI invalide</string>
+    <string name="error_message_for_invalid_name">Nom invalide: 3 caracteres min et 30 caracteres max</string>
+    <string name="error_message_for_invalid_phone">Telephone invalide: format 06 XX XX XX XX ou 07 XX XX XX XX</string>
+    <string name="error_message_for_invalid_website">Site web invalide</string>
+    <string name="error_message_for_invalid_address">Adresse invalide: 3 caracteres min et 30 caracteres max</string>
+    <string name="error_message_for_invalid_about">A propos invalide: 3 caracteres min et 30 caracteres max</string>
+    <string name="list_neighbors_title">Liste des voisins</string>
+    <string name="add_neighbors_title">Nouveau voisin</string>
 </resources>

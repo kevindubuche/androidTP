@@ -16,13 +16,14 @@ import com.example.neighbors.adapters.ListNeighborsAdapter
 import com.example.neighbors.data.NeighborRepository
 import com.example.neighbors.models.Neighbor
 import android.content.DialogInterface
-
-
+import com.example.neighbors.NavigationListener
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
 class ListNeighborsFragment : Fragment(), ListNeighborHandler {
     private lateinit var recyclerView: RecyclerView
     private lateinit var listNeighborHandler: ListNeighborHandler
+    private lateinit var addNeighbor: FloatingActionButton
 
     /**
      * Fonction permettant de définir une vue à attacher à un fragment
@@ -33,14 +34,28 @@ class ListNeighborsFragment : Fragment(), ListNeighborHandler {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.list_neighbors_fragment, container, false)
+
+        (activity as? NavigationListener)?.let {
+            it.updateTitle(R.string.list_neighbors_title)
+        }
+
         recyclerView = view.findViewById(R.id.neighbors_list)
         recyclerView.layoutManager = LinearLayoutManager(context)
+        addNeighbor = view.findViewById(R.id.neighbors_add)
+
         recyclerView.addItemDecoration(
             DividerItemDecoration(
                 requireContext(),
                 DividerItemDecoration.VERTICAL
             )
         )
+
+        addNeighbor.setOnClickListener {
+            (activity as? NavigationListener)?.let {
+                it.showFragment(AddNeighborFragment())
+            }
+        }
+
         return view
     }
 
@@ -64,10 +79,10 @@ class ListNeighborsFragment : Fragment(), ListNeighborHandler {
         ) { _, _ ->
             Toast.makeText(recyclerView.context, "Voisin suprimmé avec succès !", Toast.LENGTH_LONG).show()
             var index : Int = NeighborRepository.getInstance().getNeighbours().indexOf(neighbor)
-            val neighbors = NeighborRepository.getInstance().deleteNeighbour(neighbor)
+//            val neighbors = NeighborRepository.getInstance().deleteNeighbour(neighbor)
+            NeighborRepository.getInstance().deleteNeighbour(neighbor)
             recyclerView.adapter?.notifyItemRemoved(index)
-            println("_________________")
-            println(index)
+            println("You have deleted the neighbor with the name "+neighbor.name )
         }
         alertDialog.setNegativeButton(
             "No"
@@ -76,6 +91,8 @@ class ListNeighborsFragment : Fragment(), ListNeighborHandler {
         alert.setCanceledOnTouchOutside(false)
         alert.show()
     }
+
+
 
 
 }
