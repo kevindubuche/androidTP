@@ -1,8 +1,9 @@
-package com.example.neighbors.fragments
+package com.example.neighbors.ui.fragments
 
 
 
 import android.annotation.SuppressLint
+import android.app.Application
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -14,14 +15,14 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.bumptech.glide.Glide
 import com.example.neighbors.NavigationListener
 import com.example.neighbors.R
-import com.example.neighbors.data.NeighborRepository
+import com.example.neighbors.di.DI.repository
+import com.example.neighbors.repositories.NeighborRepository
 import com.example.neighbors.models.Neighbor
+import com.example.neighbors.ui.MainActivity
 import com.google.android.material.textfield.TextInputLayout
 import com.squareup.picasso.Picasso
-import kotlin.math.floor
 
 class AddNeighborFragment: Fragment() {
     private lateinit var imagePreview: ImageView
@@ -32,6 +33,15 @@ class AddNeighborFragment: Fragment() {
     private lateinit var address: TextInputLayout
     private lateinit var about: TextInputLayout
     private lateinit var saveBotton: Button
+    private lateinit var repository: NeighborRepository
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        val application: Application = activity?.application ?: return
+
+        repository = NeighborRepository.getInstance(application)
+    }
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -76,13 +86,15 @@ class AddNeighborFragment: Fragment() {
                 favorite = false,
                 webSite = website.editText?.text.toString()
             )
-            this.addNeighbor(newNeighbor)
+            validationCheck()
+            addNeighbor(newNeighbor)
+
         }
         return view
     }
 
     private fun addNeighbor(newNeighbor: Neighbor) {
-        NeighborRepository.getInstance().addNeighbor(newNeighbor)
+        repository.add(newNeighbor)
         Toast.makeText(context, "Voisin ajoute", Toast.LENGTH_LONG).show()
         (activity as? NavigationListener)?.showFragment(ListNeighborsFragment())
     }

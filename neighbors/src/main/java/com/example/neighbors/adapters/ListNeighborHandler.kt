@@ -8,5 +8,6 @@ import com.example.neighbors.models.Neighbor
 
 interface ListNeighborHandler {
     fun onDeleteNeibor(neighbor: Neighbor)
+    fun onDisplayDetails(neighbor: Neighbor)
 
 }
