@@ -1,13 +1,14 @@
-package com.example.neighbors.data.service
+package com.example.neighbors.dal
 
+import androidx.lifecycle.LiveData
 import com.example.neighbors.models.Neighbor
 
-interface NeighborApiService {
+interface NeighborDatasource {
     /**
      * Get all my Neighbors
-     * @return [List]
+     * @return [MutableList]
      */
-    val neighbours: List<Neighbor>
+    val neighbours: LiveData<List<Neighbor>>
 //    fun getNeighbour(): List<Neighbor>
 
     /**
@@ -22,6 +23,9 @@ interface NeighborApiService {
      */
     fun createNeighbour(neighbor: Neighbor)
 
+    fun getGeneratedId():Long
+
+
     /**
      * Update "Favorite status" of an existing Neighbour"
      * @param neighbor: Neighbor
@@ -33,5 +37,5 @@ interface NeighborApiService {
      * @param neighbor: Neighbor
      */
     fun updateDataNeighbour(neighbor: Neighbor)
-}
 
+}

@@ -7,6 +7,6 @@ data class Neighbor(
     val address: String,
     val phoneNumber: String,
     val aboutMe: String,
-    val favorite: Boolean,
+    var favorite: Boolean,
     val webSite: String
 )

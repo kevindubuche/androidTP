@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="5dp"
+                android:elevation="10dp">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="142dp"
+                    android:layout_height="243dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@null"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteY="28dp" />
+            </androidx.cardview.widget.CardView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingStart="40dp"
+                android:layout_marginTop="15dp"
+                android:paddingEnd="40dp"
+                android:layout_gravity="center_vertical">
+                <TextView
+                    android:id="@+id/labelFavori"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Favoris : " />
+
+                <Switch
+                    android:id="@+id/favorisSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingStart="40dp"
+                android:layout_marginTop="15dp"
+                android:paddingEnd="40dp"
+                android:layout_gravity="center_vertical">
+                <TextView
+                    android:id="@+id/labelName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nom : " />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="63dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="nom"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingStart="40dp"
+                android:layout_marginTop="15dp"
+                android:paddingEnd="40dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/labelPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Téléphone : " />
+
+                <TextView
+                    android:id="@+id/phone"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="Téléphone"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingStart="40dp"
+                android:layout_marginTop="15dp"
+                android:paddingEnd="40dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/labelWebsite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Site Web : " />
+
+                <TextView
+                    android:id="@+id/website"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="website" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingStart="40dp"
+                android:layout_marginTop="15dp"
+                android:paddingEnd="40dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/labelAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Adresse : " />
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="Adresse" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingStart="40dp"
+                android:layout_marginTop="15dp"
+                android:paddingEnd="40dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/labelAbout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="A propos : " />
+                <TextView
+                    android:id="@+id/about"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="A propos " />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+    </ScrollView>

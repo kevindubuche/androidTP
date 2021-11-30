@@ -18,21 +18,30 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:layout_width="wrap_content"<<<<<<< room
         android:layout_height="wrap_content"
+        android:layout_marginBottom="192dp"
         android:text="@string/textview"
         app:layout_constraintBottom_toTopOf="@+id/btn_click_me"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="176dp" />
+        app:layout_constraintVertical_bias="1.0" />
+
 
     <Button
         android:id="@+id/btn_compute"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:text="Faire calcul"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_click_me"
-        app:layout_constraintVertical_bias="0.808"
-        tools:layout_editor_absoluteX="136dp" />
+        app:layout_constraintVertical_bias="0.805" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

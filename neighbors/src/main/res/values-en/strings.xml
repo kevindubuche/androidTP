@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">neighbors</string>
+    <string name="app_name">NEIGHBOR APP</string>
     <string name="hint_address">Address</string>
     <string name="error_message_for_required_field">Required field</string>
     <string name="error_message_for_invalid_URI">Invalid URI</string>
@@ -11,4 +11,5 @@
     <string name="error_message_for_invalid_about">Invalid about: 3 characters min and 30 characters max</string>
     <string name="list_neighbors_title">Neghbors list</string>
     <string name="add_neighbors_title">New neighbor</string>
+    <string name="details_neighbor_title">Neighbor details </string>
 </resources>

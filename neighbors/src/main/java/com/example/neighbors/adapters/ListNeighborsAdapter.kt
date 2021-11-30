@@ -36,7 +36,11 @@ class ListNeighborsAdapter(
         // Display Neighbour Name
         holder.mNeighbourName.text = neighbour.name
 
-        holder.mDeleteButton.setOnClickListener {
+        holder.mNeighbourName.setOnClickListener {
+            listNeighborHandler.onDisplayDetails(neighbour)
+        }
+
+        holder.mDeleteButton.setOnClickListener{
             listNeighborHandler.onDeleteNeibor(neighbour)
         }
 
